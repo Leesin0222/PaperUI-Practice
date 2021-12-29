@@ -7,16 +7,17 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/shop"
         android:layout_width="40dp"
         android:layout_height="50dp"
         android:visibility="invisible"
         android:layout_marginTop="16dp"
         android:src="@drawable/img"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/setting"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/setting"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:visibility="invisible"
