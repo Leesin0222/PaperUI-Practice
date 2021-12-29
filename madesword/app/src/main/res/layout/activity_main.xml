@@ -56,19 +56,21 @@
         android:id="@+id/monstername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="monstername"
+        android:fontFamily="@font/uhbee_rami_bold"
+        android:text="lv3.노란색종이쪼가리"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        android:fontFamily="@font/uhbee_rami"
+        app:layout_constraintBottom_toTopOf="@+id/monster"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/monster" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/uhbee_rami_bold"
-        android:text="코틀린"
+        android:text="닉네임"
+        android:textColor="@color/black"
         android:textSize="40sp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -118,6 +120,54 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/money" />
+
+    <ImageView
+        android:id="@+id/moneypotion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/goldpotion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/moneypotioncount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/uhbee_rami_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/moneypotion"
+        app:layout_constraintEnd_toEndOf="@+id/moneypotion"
+        app:layout_constraintStart_toStartOf="@+id/moneypotion"
+        app:layout_constraintTop_toTopOf="@+id/moneypotion" />
+
+    <ImageView
+        android:id="@+id/manapotion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/manapotion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/manapotioncount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/uhbee_rami_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/manapotion"
+        app:layout_constraintEnd_toEndOf="@+id/manapotion"
+        app:layout_constraintStart_toStartOf="@+id/manapotion"
+        app:layout_constraintTop_toTopOf="@+id/manapotion" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
