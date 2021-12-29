@@ -8,20 +8,22 @@
 
     <ImageView
         android:id="@+id/shop"
-        android:layout_width="40dp"
-        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
         android:visibility="invisible"
         android:layout_marginTop="16dp"
         android:src="@drawable/img"
         app:layout_constraintEnd_toEndOf="@+id/setting"
         app:layout_constraintTop_toBottomOf="@+id/setting" />
 
+
+
     <ImageView
         android:id="@+id/setting"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/img_1"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +49,6 @@
         android:clickable="true"
         android:focusable="true"
         app:srcCompat="@drawable/ic_round_menu_24"
-        android:tint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,9 +63,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monster" />
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/uhbee_rami_bold"
+        android:text="코틀린"
+        android:textSize="40sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/moneyname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="돈"
+        android:fontFamily="@font/uhbee_rami_bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/uhbee_rami_bold"
+        android:text="10000000"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/moneyname"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/uhbee_rami_bold"
+        android:text="레벨"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/moneyname" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/uhbee_rami_bold"
+        android:text="5049"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/money" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
