@@ -30,6 +30,11 @@
         app:layout_constraintTop_toBottomOf="@+id/menu_btn" />
 
     <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src=""
+
+    <ImageView
         android:id="@+id/monster"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
@@ -105,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/uhbee_rami_bold"
-        android:text="레벨"
+        android:text="랭크"
         android:textSize="20sp"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/name"
@@ -116,7 +121,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/uhbee_rami_bold"
-        android:text="5049"
+        android:text="다이아3"
+        android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/money" />
@@ -168,6 +174,10 @@
         app:layout_constraintTop_toTopOf="@+id/manapotion" />
 
 
+    <FrameLayout
+        android:id="@+id/fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
