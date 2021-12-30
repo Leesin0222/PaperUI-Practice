@@ -1,13 +1,17 @@
 package com.yongjincompany.madesword
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.fragment.app.FragmentActivity
 import com.yongjincompany.madesword.databinding.ActivityMainBinding
+import com.yongjincompany.madesword.view.ShopFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : FragmentActivity() {
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_open_anim)}
     private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_close_anim)}
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.shop.setOnClickListener {
+            setFragment()
 
         }
 
@@ -37,8 +42,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        //super.onBackPressed()
+        binding.fragment2.visibility = View.GONE
+    }
 
-
+    private fun setFragment(){
+        binding.fragment2.visibility = View.VISIBLE
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.replace(R.id.fragment2, ShopFragment()).commit()
+    }
 
     private fun onMenuButtonClicked() {
         setVisibility(clicked)
@@ -46,23 +59,22 @@ class MainActivity : AppCompatActivity() {
         clicked = !clicked
     }
 
-
-    private fun setAnimation(clicked: Boolean){
-        if(!clicked){
+    private fun setAnimation(clicked: Boolean) {
+        if (!clicked) {
             binding.setting.visibility = View.VISIBLE
             binding.shop.visibility = View.VISIBLE
-        }else{
+        } else {
             binding.setting.visibility = View.INVISIBLE
             binding.shop.visibility = View.INVISIBLE
         }
     }
 
     private fun setVisibility(clicked: Boolean) {
-        if(!clicked){
+        if (!clicked) {
             binding.setting.startAnimation(fromBottom)
             binding.shop.startAnimation(fromBottom)
             binding.menuBtn.startAnimation(rotateOpen)
-        }else{
+        } else {
             binding.setting.startAnimation(toBottom)
             binding.shop.startAnimation(toBottom)
             binding.menuBtn.startAnimation(rotateClose)
