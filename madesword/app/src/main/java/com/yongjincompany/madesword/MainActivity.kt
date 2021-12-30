@@ -63,18 +63,22 @@ class MainActivity : FragmentActivity() {
         if (!clicked) {
             binding.setting.visibility = View.VISIBLE
             binding.shop.visibility = View.VISIBLE
+            binding.myweapon.visibility = View.VISIBLE
         } else {
             binding.setting.visibility = View.INVISIBLE
             binding.shop.visibility = View.INVISIBLE
+            binding.myweapon.visibility = View.INVISIBLE
         }
     }
 
     private fun setVisibility(clicked: Boolean) {
         if (!clicked) {
+            binding.myweapon.startAnimation(fromBottom)
             binding.setting.startAnimation(fromBottom)
             binding.shop.startAnimation(fromBottom)
             binding.menuBtn.startAnimation(rotateOpen)
         } else {
+            binding.myweapon.startAnimation(toBottom)
             binding.setting.startAnimation(toBottom)
             binding.shop.startAnimation(toBottom)
             binding.menuBtn.startAnimation(rotateClose)
