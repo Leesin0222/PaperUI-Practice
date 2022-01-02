@@ -24,9 +24,9 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="1.4dp"
-        android:layout_margin="20dp"
-        android:background="#A3A3A3"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="#7C7C7C"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -100,6 +100,8 @@
         android:layout_width="match_parent"
         android:layout_height="1.4dp"
         android:background="#A3A3A3"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
