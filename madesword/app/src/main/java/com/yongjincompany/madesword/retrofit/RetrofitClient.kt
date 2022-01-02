@@ -5,9 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    const val MainServer = "http://api.drfriday.in/api/user/"
-
-    const val ImageMainServer = "http://api.drfriday.in/";
+    const val MainServer = "http://"
 
     val retrofitClient: Retrofit.Builder by lazy {
 
